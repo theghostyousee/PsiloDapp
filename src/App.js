@@ -172,7 +172,7 @@ function App() {
                   <h3>Total PSILO for Sale</h3>
                 </div>
                 <div className='amount'>
-                  <h3>5,000</h3>
+                  <h3>250</h3>
                 </div>
               </div>
 
