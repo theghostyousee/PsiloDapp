@@ -154,7 +154,7 @@ function App() {
 
               <div className='invest-wrap'>
                 <div className='invest-loads'>
-                  <div className='invests-progress'style={{ width: `${percentage}%` }}></div>
+                  <div className='invests-progress'style={{ width: `50%` }}></div>
                 </div>
               </div>
 
@@ -163,7 +163,7 @@ function App() {
                   <h3>Total Fund Raised</h3>
                 </div>
                 <div className='amount'>
-                  <h3>{(totalPurchased * 1800).toFixed(2)}$</h3>
+                  <h3>45,000$</h3>
                   <img src={eth}></img>
                 </div>
               </div>
