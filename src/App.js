@@ -163,7 +163,7 @@ function App() {
                   <h3>Total Fund Raised</h3>
                 </div>
                 <div className='amount'>
-                  <h3>{(totalPurchased * 1800).toFixed(2)}</h3>
+                  <h3>{(totalPurchased * 1800).toFixed(2)}$</h3>
                   <img src={eth}></img>
                 </div>
               </div>
