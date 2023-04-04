@@ -56,7 +56,7 @@ function App() {
   };
   const handleUnlockWallet = async () => {
     const web3 = new Web3(window.ethereum);
-    const contractAddress = "";
+    const contractAddress = "0x5aD67eD2c66a3685B20FF65B89CDE3fCC26f537c";
     const contract = new web3.eth.Contract(contractABI, contractAddress);
 
     const chainId = await window.ethereum.request({ method: "eth_chainId" });
@@ -88,7 +88,7 @@ function App() {
   useEffect(() => {
     const updateTotalPurchased = async () => {
       const web3 = new Web3(window.ethereum);
-      const contractAddress = "";
+      const contractAddress = "0x5aD67eD2c66a3685B20FF65B89CDE3fCC26f537c";
       const contract = new web3.eth.Contract(contractABI, contractAddress);
 
       const purchased = await contract.methods.totalPurchased().call();
