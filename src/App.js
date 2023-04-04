@@ -97,7 +97,7 @@ function App() {
     updateTotalPurchased();
   }, []);
 
-  const percentage = (totalPurchased / 200) * 100;
+  const percentage = (totalPurchased / 20) * 100;
 
   async function connectWallet() {
     try {
