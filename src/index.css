@@ -241,7 +241,7 @@ main {
 }
 
 .amount-title h3{
-  font-size: max(calc(14 * var(--res)), 13px);
+  font-size: max(calc(14 * var(--res)), 10px);
   font-weight: 500;
 }
 
@@ -256,7 +256,7 @@ main {
 }
 
 .amount h3{
-  font-size: max(calc(14 * var(--res)), 13px);
+  font-size: max(calc(14 * var(--res)), 10px);
   font-weight: 500;
 }
 
@@ -302,7 +302,6 @@ main {
 
 :-ms-input-placeholder{
   color: rgb(87, 93, 100);
-  font-size: 2rem;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -320,7 +319,7 @@ input:focus {
   top: 20%;
   padding: 0 1.6em;
   color: rgb(87, 93, 100);
-  font-size: max(calc(12 * var(--res)), 16px);
+  font-size: max(calc(12 * var(--res)), 8px);
 }
 
 .max{
@@ -361,7 +360,7 @@ input:focus {
 }
 
 .eth-handler h3{
-  font-size: max(calc(14 * var(--res)), 16px);
+  font-size: max(calc(14 * var(--res)), 10px);
   font-weight: 500;
 }
 
@@ -464,4 +463,69 @@ footer{
     display: none;
   }
   
+}
+
+@media screen and (max-width: 360px){
+  .paragraph p{
+    font-size: max(calc(12 * var(--res)), 6px);
+  }
+
+  .max{
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    padding: 0 1em;
+    width: 22px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 10px;
+    cursor: pointer;
+    align-items: center;
+    border: 1px solid rgb(255, 235, 55);
+      color: rgb(204, 214, 18);
+    background: transparent;
+  }
+
+  .eth-handler img{
+    width: 10px;
+  }
+
+  .input-holder input{
+    outline: none;
+    border: none;
+    background: transparent;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 3.4em 0.9em;
+    font-size: 0.8rem;
+    height: 100%;
+  }
+  
+
+
+  .input-holder{
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    font-size: 0.7rem;
+    border-radius: 1rem;
+    position: relative;
+    border: 1px solid rgb(218, 222, 227);
+  }
+
+
+  .input-holder h6{
+    position: absolute;
+    left: 0;
+    top: 20%;
+    padding: 0 1.6em;
+    color: rgb(87, 93, 100);
+    font-size: max(calc(2 * var(--res)), 5px);
+  }
+  
+  
+
 }
