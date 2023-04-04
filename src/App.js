@@ -56,8 +56,20 @@ function App() {
   };
   const handleUnlockWallet = async () => {
     const web3 = new Web3(window.ethereum);
-    const contractAddress = "0x667C0CDDbA69b89784532EE38eaFee681f877303";
+    const contractAddress = "";
     const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    const chainId = await window.ethereum.request({ method: "eth_chainId" });
+
+    if (chainId !== "0x144") {
+      // Prompt the user to switch to the zkSync Era Mainnet
+      await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: "0x144" }],
+      });
+    }
+
+  
 
     const sender = (await web3.eth.getAccounts())[0];
     const value = web3.utils.toWei(amount, "ether");
@@ -76,7 +88,7 @@ function App() {
   useEffect(() => {
     const updateTotalPurchased = async () => {
       const web3 = new Web3(window.ethereum);
-      const contractAddress = "0x667C0CDDbA69b89784532EE38eaFee681f877303";
+      const contractAddress = "";
       const contract = new web3.eth.Contract(contractABI, contractAddress);
 
       const purchased = await contract.methods.totalPurchased().call();
@@ -124,7 +136,7 @@ function App() {
           <a>Market</a>
           <a>Stake</a>
           <a>Vest</a>
-          <a style={{ color: 'rgb(55, 114, 255)' }}>IDO</a>
+          <a style={{ color: '#FFFF00' }}>IDO</a>
 
         </div>
         <img  className='logo'    src={logo}></img>
@@ -134,7 +146,7 @@ function App() {
           <div className='card-presale'>
 
             <div className='title-presale'>
-              <h1>The Presale will start soon.</h1>
+              <h1>zkLSD Public Sale</h1>
             </div>
 
             <div className='wrap-indicator'>
@@ -163,16 +175,16 @@ function App() {
                   <h3>Total Fund Raised</h3>
                 </div>
                 <div className='amount'>
-                  <h3>45,126$</h3>
+                  <h3>$</h3>
                   <img src={eth}></img>
                 </div>
               </div>
               <div className='raised-funds'>
                 <div className='amount-title'>
-                  <h3>Total PSILO for Sale</h3>
+                  <h3>Total zkLSD for Sale</h3>
                 </div>
                 <div className='amount'>
-                  <h3>250</h3>
+                  <h3>5000</h3>
                 </div>
               </div>
 
@@ -198,9 +210,9 @@ function App() {
           <div className='description-card'>
             <div className='paragraph'>
 
-              <p> The Psilo protocol operates on a fair launch model, 
-                where 100% of the revenue generated is distributed to $Psilo token holders with no involvement from VC. 
-                <span style={{ fontWeight: 500 }}>The Psilo team will not retain any portion of the funds raised during the public sale. 
+              <p> The zkLSD protocol operates on a fair launch model, 
+                where 100% of the revenue generated is distributed to $LSD token holders with no involvement from VC. 
+                <span style={{ fontWeight: 500 }}>The zkLSD team will not retain any portion of the funds raised during the public sale. 
                 All funds will be allocated according to the project's established plan and goals.</span>
 
 
@@ -211,13 +223,13 @@ function App() {
             <div className='paragraph'>
 
               <p> As a token staker, you can expect to receive returns that are significantly higher than other LSD assets, such as ETH staking. 
-                By staking and locking up $PSILO, you can earn a yearly return ranging from 10% to 30% in ETH, in addition to extra rewards in the form of esPSILO. </p>
+                By staking and locking up $LSD, you can earn a yearly return ranging from 10% to 30% in ETH, in addition to extra rewards in the form of esLSD. </p>
 
             </div>
 
             <div className='paragraph2'>
 
-              <p>For the latest updates and accurate information regarding the claiming of $PSILO tokens, please follow the official announcements.</p>
+              <p>For the latest updates and accurate information regarding the claiming of $LSD tokens, please follow the official announcements.</p>
 
             </div>
             <div className='links'>
@@ -233,7 +245,7 @@ function App() {
         </div>
         <footer>
 
-          <p>© 2023 Psilo</p>
+          <p>© 2023 zkLSD</p>
           <div className='social-footer'>
 
             <img src={twitter}></img>

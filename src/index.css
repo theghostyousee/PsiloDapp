@@ -21,7 +21,7 @@ body {
   position: relative;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to right, #f6f7f9, #d9b0cf36);
+  background-color: black;
   justify-content: center;
   position: relative;
 }
@@ -50,7 +50,7 @@ header {
 }
 
 .liste a{
-  color: rgb(27, 30, 40);
+  color: rgb(255, 255, 255);
   font-size: max(calc(15 * var(--res)), 16px);
   cursor: pointer;
   font-weight: 500;
@@ -66,8 +66,8 @@ header {
   min-width: 64px;
   cursor: pointer;
   padding: 8px 22px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(55, 114, 255);
+  color: rgb(5, 0, 0);
+  background-color: #FFFF00;
   box-shadow: none;
   text-transform: none;
   border-radius: 8px;
@@ -101,7 +101,10 @@ main {
 }
 
 .card-presale{
-  background: white;
+  background: hsla(0, 0%, 100%, 0.934);
+  box-shadow: 0 6px 10px rgb(0 0 0 / 15%);
+  backdrop-filter: blur(33px);
+  -webkit-backdrop-filter: blur(33px);
   width: 80%;
   max-width: 800px;
   height: 52%;
@@ -137,7 +140,7 @@ main {
 .long-bar{
   width: 80%;
   height: 50%;
-  background-color: #C49DFF;
+  background-color: #ffff00;
   border-radius: 0.4rem;
   display: flex;
   justify-content: center;
@@ -160,7 +163,7 @@ main {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: rgb(197, 157, 255);
+  background-color: rgb(203, 210, 12);
   margin-right: 8px;
 }
 
@@ -213,7 +216,7 @@ main {
 
 .invests-progress{
   position: absolute;
-  background-color: #C49DFF;
+  background-color: #FFFF00;
   height: 100%;
   width: 10%;
   border-top-left-radius: 1rem;
@@ -332,14 +335,14 @@ input:focus {
   border-radius: 8px;
   cursor: pointer;
   align-items: center;
-  border: 1px solid rgba(55, 114, 255, 0.5);
-    color: rgb(55, 114, 255);
+  border: 1px solid rgb(255, 235, 55);
+    color: rgb(204, 214, 18);
   background: transparent;
 }
 
 .max:hover{
-  border: 1px solid rgba(55, 115, 255, 0.886);
-  color: rgb(27, 92, 242);
+  border: 1px solid rgba(235, 255, 55, 0.886);
+  color: rgb(242, 238, 27);
 }
 
 
@@ -367,7 +370,7 @@ input:focus {
 }
 
 .btn-wrapper{
-  background-color: rgb(55, 114, 255);
+  background-color: rgba(255, 251, 25, 0.823);
   box-shadow: none;
   text-transform: none;
   border-radius: 8px;
@@ -379,7 +382,7 @@ input:focus {
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: black;
   height: 100%;
   width: 100%;
   cursor: pointer;
@@ -390,7 +393,7 @@ input:focus {
 }
 
 .btn-wrapper:hover{
-  background-color: rgb(29, 91, 236);
+  background-color: rgb(217, 200, 10);
 }
 
 .description-card{
@@ -433,12 +436,12 @@ input:focus {
   width: 80%;
   justify-content: center;
   align-items: center;
-  color: rgb(55, 114, 255);
+  color: rgb(245, 255, 55);
   gap: 1vmin;
 }
 
 a{
-  color: rgb(55, 114, 255);;
+  color: rgb(0, 0, 0);;
 }
 
 footer{
