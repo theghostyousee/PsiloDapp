@@ -32,6 +32,22 @@ function App() {
     }
   }, []);
 
+  const connectMetaMask = async () => {
+    if (typeof window.ethereum !== "undefined") {
+      try {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        const web3 = new Web3(window.ethereum);
+        const accounts = await web3.eth.getAccounts();
+        setConnected(true);
+        console.log("Connected to MetaMask with account:", accounts[0]);
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      console.error("Please install MetaMask");
+    }
+  };
+
   const shortAddress = (address) => {
     return address ? address.slice(0, 6) + '...' + address.slice(-5) : '';
   };
@@ -203,7 +219,11 @@ function App() {
               </div>
             </div>
             <div className='btn-wrapper'>
-              <button onClick={handleUnlockWallet}>Contribute</button>
+              {connected ? (
+                  <button onClick={handleUnlockWallet}>Contribute</button>
+                ) : (
+                  <button onClick={connectMetaMask}>Contribute</button>
+                )}
             </div>
 
           </div>
