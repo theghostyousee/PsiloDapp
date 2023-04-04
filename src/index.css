@@ -529,3 +529,29 @@ footer{
   
 
 }
+
+
+@media screen and (max-height: 950px){
+  .input-holder{
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+    font-size: 2rem;
+  
+    border-radius: 1rem;
+    position: relative;
+    border: 1px solid rgb(218, 222, 227);
+  }
+
+  .input-holder input{
+    outline: none;
+    border: none;
+    background: transparent;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 1.4em 0.9em;
+    font-size: 0.4rem;
+    height: 100%;
+  }
+}
